@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+class CustomTextField extends StatefulWidget {
+  const CustomTextField({Key key}) : super(key: key);
+
+  @override
+  _CustomTextFieldState createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      decoration:  InputDecoration(
+        labelText: "Enter Email",
+        fillColor: Colors.white,
+        border: OutlineInputBorder(
+          gapPadding: 0,
+          borderRadius:  BorderRadius.circular(20.0),
+          borderSide:  BorderSide(
+          ),
+        ),
+        //fillColor: Colors.green
+      ),
+      //textAlign: TextAlign.start,
+      validator: (val) {
+        if(val.length==0) {
+          return "Email cannot be empty";
+        }else{
+          return null;
+        }
+      },
+      keyboardType: TextInputType.emailAddress,
+      style:  TextStyle(
+        fontFamily: "Poppins",
+      ),
+      autofocus: true,
+    );
+
+  }
+}

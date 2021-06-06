@@ -1,0 +1,76 @@
+// ignore: library_names
+library CustomProgressIndicator;
+
+import 'package:flutter/material.dart';
+
+import 'progresscolor.dart';
+
+class CustomCircularIndicator extends StatefulWidget {
+  //variable to hold box height
+  final double sizeboxheight;
+  //variable to hold box width
+  final double sizeboxwidth;
+  //variable to hold start color for gradient
+  final int startcolor;
+  //variable for end color of gradient
+  final int endcolor;
+  //variable for middle color of gradient
+  final int midcolor;
+  //width of the circular line
+  final double linewidth;
+  //fontsize of progress text
+  final double fontsize;
+  //font weight of progress text
+  final FontWeight fontweight;
+  final progress;
+
+  CustomCircularIndicator({
+    required this.sizeboxheight,
+    required this.sizeboxwidth,
+    required this.startcolor,
+    required this.endcolor,
+    required this.midcolor,
+    required this.linewidth,
+    required this.progress,
+    required this.fontsize,
+    required this.fontweight,
+
+    //this.progresscolor //= currentProgressColor(progress1, progress2, progress3, progress4),
+  });
+
+  @override
+  _CustomCircularIndicatorState createState() =>
+      _CustomCircularIndicatorState();
+}
+
+class _CustomCircularIndicatorState extends State<CustomCircularIndicator> {
+  //double progress = 0.6;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: SizedBox(
+        width: widget.sizeboxwidth,
+        height: widget.sizeboxheight,
+        child: CustomPaint(
+          painter: GradientArcPainter(
+            progress: widget.progress,
+            startColor: Color(widget.startcolor),
+            endColor: Color(widget.endcolor),
+            midColor: Color(widget.midcolor),
+            width: widget.linewidth,
+          ),
+          child: Center(
+            child: Text(
+              '${widget.progress*100}%',
+              style: TextStyle(
+                fontSize: widget.fontsize,
+                fontWeight: widget.fontweight,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

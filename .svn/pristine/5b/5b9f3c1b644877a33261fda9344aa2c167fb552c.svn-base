@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61cbb642-6afa-4c56-83f0-d6852fbb56bd" name="Default Changelist" comment="add button package">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/Custom_Progress_Indicator/lib/package_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/Custom_Progress_Indicator/lib/package_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@/Users/rocksolid/.android/avd/New_Device_API_27.avd]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/packages/Custom_Progress_Indicator" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="ProjectId" id="1sqnIjSaE5c8gx1b8lrCtNMBn7T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61cbb642-6afa-4c56-83f0-d6852fbb56bd" name="Default Changelist" comment="" />
+      <created>1621608916330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621608916330</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1st commit">
+      <created>1621857162541</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621857162541</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add button package">
+      <created>1621964240216</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621964240216</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+    <MESSAGE value="1st commit" />
+    <MESSAGE value="add button package" />
+    <option name="LAST_COMMIT_MESSAGE" value="add button package" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="100" y="123" width="1080" height="577" key="AVDManager" timestamp="1621609841552">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="100" y="123" width="1080" height="577" key="AVDManager/0.23.1280.777@0.23.1280.777" timestamp="1621609841552" />
+    <state width="1238" height="250" key="GridCell.Tab.0.bottom" timestamp="1621966716709">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="269" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1621700416706" />
+    <state width="1238" height="250" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1621966716709" />
+    <state width="1238" height="250" key="GridCell.Tab.0.center" timestamp="1621966716708">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="269" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1621700416704" />
+    <state width="1238" height="250" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1621966716708" />
+    <state width="1238" height="250" key="GridCell.Tab.0.left" timestamp="1621966716708">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="269" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1621700416703" />
+    <state width="1238" height="250" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1621966716708" />
+    <state width="1238" height="250" key="GridCell.Tab.0.right" timestamp="1621966716709">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1238" height="269" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1621700416705" />
+    <state width="1238" height="250" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1621966716709" />
+    <state x="269" y="171" key="MultipleFileMergeDialog" timestamp="1621964582971">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="269" y="171" key="MultipleFileMergeDialog/0.23.1280.777@0.23.1280.777" timestamp="1621964582971" />
+    <state x="171" y="61" key="SettingsEditor" timestamp="1622101032701">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="171" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1621622374418" />
+    <state x="171" y="61" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1622101032701" />
+    <state x="240" y="141" key="Vcs.Push.Dialog.v2" timestamp="1622101449695">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="240" y="121" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1621857323287" />
+    <state x="240" y="141" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1622101449695" />
+    <state x="407" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621964573832">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="407" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1621964573832" />
+    <state x="367" y="299" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1621934987649">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="367" y="299" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1280.777@0.23.1280.777" timestamp="1621934987649" />
+    <state x="0" y="23" width="1146" height="777" key="new project wizard" timestamp="1621960990757">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="0" y="23" width="1146" height="777" key="new project wizard/0.23.1280.777@0.23.1280.777" timestamp="1621960990757" />
+  </component>
+</project>

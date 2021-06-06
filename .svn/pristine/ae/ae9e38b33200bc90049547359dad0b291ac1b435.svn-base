@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="535388c7-51c6-4f2a-88cd-d758cb40fdc9" name="Default Changelist" comment="variable description added" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1swWZ4iT2i3x0Nbbvrv5iNJL1Hr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="535388c7-51c6-4f2a-88cd-d758cb40fdc9" name="Default Changelist" comment="" />
+      <created>1621784195394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621784195394</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1st commit">
+      <created>1621857381751</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621857381751</updated>
+    </task>
+    <task id="LOCAL-00002" summary="crate separate file for progresscolor.dart">
+      <created>1621927868900</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621927868900</updated>
+    </task>
+    <task id="LOCAL-00003" summary="variable description added">
+      <created>1621935389895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621935389895</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1st commit" />
+    <MESSAGE value="crate separate file for progresscolor.dart" />
+    <MESSAGE value="variable description added" />
+    <option name="LAST_COMMIT_MESSAGE" value="variable description added" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="100" y="123" width="1080" height="577" key="AVDManager" timestamp="1621911152622">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="100" y="123" width="1080" height="577" key="AVDManager/0.23.1280.777@0.23.1280.777" timestamp="1621911152622" />
+    <state x="240" y="155" key="Vcs.Push.Dialog.v2" timestamp="1621935397082">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="240" y="136" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1621857438939" />
+    <state x="240" y="155" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1621935397082" />
+    <state x="407" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621928580522">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="407" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1621928580522" />
+    <state x="340" y="289" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1621934903773">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="340" y="289" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1280.777@0.23.1280.777" timestamp="1621934903773" />
+    <state x="478" y="209" key="svn.repositoryBrowser" timestamp="1621934720726">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="478" y="209" key="svn.repositoryBrowser/0.23.1280.777@0.23.1280.777" timestamp="1621934720726" />
+  </component>
+</project>
