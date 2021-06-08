@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:phygitalz_standard/components/TabCard.dart';
+import 'package:phygitalz_standard/components/Tabcardlinechart.dart';
 import 'package:phygitalz_standard/components/charts.dart';
 import 'package:phygitalz_standard/components/linechart.dart';
-import 'package:phygitalz_standard/components/linechartbuilder.dart';
+//import 'package:phygitalz_standard/components/linechartbuilder.dart';
 
 class BarChart extends StatelessWidget {
   const BarChart({Key key}) : super(key: key);
@@ -33,7 +34,6 @@ class BarChart extends StatelessWidget {
                   children: [
                     Positioned(
                       child: Container(
-
                         width: MediaQuery.of(context).size.width - 120,
                         height: 64,
                         // color: Colors.yellow,
@@ -50,14 +50,14 @@ class BarChart extends StatelessWidget {
                         // color: Colors.pinkAccent,
                         color: Colors.white,
                         child: Padding(
-                          padding:  const EdgeInsets.only(left: 12.0,right:12 ,bottom: 7),
+                          padding: const EdgeInsets.only(
+                              left: 12.0, right: 12, bottom: 7),
                           child: chartBuilder(),
                         ),
                       ),
                       top: 99,
                       right: -11.5,
                     ),
-
                     Positioned(
                       child: Container(
                         width: MediaQuery.of(context).size.width,
@@ -72,14 +72,18 @@ class BarChart extends StatelessWidget {
                                 height: 60,
                                 width: 60,
                                 child: Image(
-                                  image: AssetImage('assets/images/electrical.jpeg'),
+                                  image: AssetImage(
+                                      'assets/images/electrical.jpeg'),
                                   fit: BoxFit.cover,
                                 ),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 8.0),
-                              child: Text("car starter",style: TextStyle(fontWeight: FontWeight.bold),),
+                              child: Text(
+                                "car starter",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ],
                         ),
@@ -96,11 +100,18 @@ class BarChart extends StatelessWidget {
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(top: 10.0),
-                              child: Text("2",style: TextStyle(fontSize: 42,color: Colors.purple),),
+                              child: Text(
+                                "2",
+                                style: TextStyle(
+                                    fontSize: 42, color: Colors.purple),
+                              ),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 12.0),
-                              child: Text("incident",style: TextStyle(fontSize: 12),),
+                              child: Text(
+                                "incident",
+                                style: TextStyle(fontSize: 12),
+                              ),
                             ),
                           ],
                         ),
@@ -118,12 +129,20 @@ class BarChart extends StatelessWidget {
                         child: Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(top: 8.0,right: 7),
-                              child: Text("200",style: TextStyle(fontSize: 42,color: Colors.pink),),
+                              padding:
+                                  const EdgeInsets.only(top: 8.0, right: 7),
+                              child: Text(
+                                "200",
+                                style:
+                                    TextStyle(fontSize: 42, color: Colors.pink),
+                              ),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 12.0),
-                              child: Text("incident",style: TextStyle(fontSize: 12),),
+                              child: Text(
+                                "incident",
+                                style: TextStyle(fontSize: 12),
+                              ),
                             ),
                           ],
                         ),
@@ -138,10 +157,47 @@ class BarChart extends StatelessWidget {
             ),
           ),
 //*****************************1st graph end here***********************//
-         Container(
-             height: 300,
-             width: MediaQuery.of(context).size.width,
-             child: lineChart()),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+              elevation: 8,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 240,
+               // color: Colors.brown,
+                child: Stack(
+                  fit: StackFit.loose,
+                  alignment: Alignment.centerLeft,
+                  children: [
+
+                    Positioned(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width-70,
+                          height: 50,
+                         // color: Colors.green,
+                          child: TabCardLine(),
+                        ),
+                      ),
+                      bottom: 200,
+                      right: 90,
+                    ),
+                    Positioned(
+                      child: Container(
+                        height: 200,
+                        width: MediaQuery.of(context).size.width,
+                       // color: Colors.blueAccent,
+                        child: CustomLChart(),
+                      ),
+                      top: 43,
+                      right: 2.5,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
