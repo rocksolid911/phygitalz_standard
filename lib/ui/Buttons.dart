@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gradientbutton/lineargradientbutton.dart';
-
+import 'package:phygitalz_standard/responsive_screen/app_config.dart';
 class ButtonsWidget extends StatefulWidget {
   const ButtonsWidget({Key key}) : super(key: key);
 
@@ -9,14 +9,18 @@ class ButtonsWidget extends StatefulWidget {
 }
 
 class _ButtonsWidgetState extends State<ButtonsWidget> {
+  AppConfig _appConfig;
   bool selectedButton10B = false;
   bool selectedButton10A = false;
   bool selectedButton9A = false;
   bool selectedButton9B = false;
   @override
   Widget build(BuildContext context) {
+    _appConfig = AppConfig(context);
     return Scaffold(
       body: Container(
+        // width: _appConfig.rWP(150),
+        // height: _appConfig.rHP(40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,14 +29,15 @@ class _ButtonsWidgetState extends State<ButtonsWidget> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
+                  //padding: EdgeInsets.zero,
                   child: CustomAnimatedButton(
-                    height: 40,
-                    width: 70,
+                    height: _appConfig.rH(5),
+                    width: _appConfig.rW(19),
                     text: "10B",
                     startcolor: 0xFFC987DE,
                     midcolor: 0xFF7A17AF,
                     endcolor: 0xFF7A17AF,
-                    radius: 18,
+                    radius: _appConfig.rW(5),
                     activecolor: Colors.white,
                     inactivecolor: Color(0xFF7A17AF),
                     selected: selectedButton10B,
@@ -49,14 +54,14 @@ class _ButtonsWidgetState extends State<ButtonsWidget> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomAnimatedButton(
-                    height: 40,
-                    width: 70,
+                    height: _appConfig.rH(5),
+                    width: _appConfig.rW(19),
                     text: "10A",
                     selected: selectedButton10A,
                     startcolor: 0xFFC987DE,
                     midcolor: 0xFF7A17AF,
                     endcolor: 0xFF7A17AF,
-                    radius: 18,
+                    radius: _appConfig.rW(5),
                     activecolor: Colors.white,
                     inactivecolor: Color(0xFF7A17AF),
                     onTap: (){
@@ -72,14 +77,14 @@ class _ButtonsWidgetState extends State<ButtonsWidget> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomAnimatedButton(
-                    height: 40,
-                    width: 70,
+                    height: _appConfig.rH(5),
+                    width: _appConfig.rW(19),
                     text: "9A",
                     selected: selectedButton9A,
                     startcolor: 0xFFC987DE,
                     midcolor: 0xFF7A17AF,
                     endcolor: 0xFF7A17AF,
-                    radius: 18,
+                    radius: _appConfig.rW(5),
                     activecolor: Colors.white,
                     inactivecolor: Color(0xFF7A17AF),
                     onTap: (){
@@ -95,14 +100,14 @@ class _ButtonsWidgetState extends State<ButtonsWidget> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomAnimatedButton(
-                    height: 40,
-                    width: 70,
+                    height: _appConfig.rH(5),
+                    width: _appConfig.rW(19),
                     text: "9B",
                     selected: selectedButton9B,
                     startcolor: 0xFFC987DE,
                     midcolor: 0xFF7A17AF,
                     endcolor: 0xFF7A17AF,
-                    radius: 18,
+                    radius: _appConfig.rW(5),
                     activecolor: Colors.white,
                     inactivecolor: Color(0xFF7A17AF),
                     onTap: (){

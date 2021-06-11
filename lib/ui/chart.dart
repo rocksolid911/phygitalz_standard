@@ -4,12 +4,14 @@ import 'package:phygitalz_standard/components/Tabcardlinechart.dart';
 import 'package:phygitalz_standard/components/charts.dart';
 import 'package:phygitalz_standard/components/linechart.dart';
 //import 'package:phygitalz_standard/components/linechartbuilder.dart';
+import 'package:phygitalz_standard/responsive_screen/app_config.dart';
 
 class BarChart extends StatelessWidget {
-  const BarChart({Key key}) : super(key: key);
-
+   BarChart({Key key}) : super(key: key);
+ AppConfig _appConfig;
   @override
   Widget build(BuildContext context) {
+    _appConfig = AppConfig(context);
     return Scaffold(
       appBar: AppBar(
         title: Text("charts"),
@@ -27,7 +29,7 @@ class BarChart extends StatelessWidget {
                 ),
                 //padding: EdgeInsets.all(50),
                 width: MediaQuery.of(context).size.width,
-                height: 280,
+                height: _appConfig.rHP(77.7777777778),//280px
                 child: Stack(
                   fit: StackFit.expand,
                   alignment: Alignment.centerLeft,
@@ -41,7 +43,7 @@ class BarChart extends StatelessWidget {
                         child: TabCard(),
                       ),
                       top: 50,
-                      right: 140,
+                      right: MediaQuery.of(context).size.width-140,
                     ),
                     Positioned(
                       child: Container(
@@ -49,11 +51,7 @@ class BarChart extends StatelessWidget {
                         height: 188,
                         // color: Colors.pinkAccent,
                         color: Colors.white,
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              left: 12.0, right: 12, bottom: 7),
-                          child: chartBuilder(),
-                        ),
+                        child: chartBuilder(),
                       ),
                       top: 99,
                       right: -11.5,

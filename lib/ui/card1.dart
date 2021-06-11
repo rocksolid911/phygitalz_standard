@@ -20,6 +20,7 @@ class _CardOneState extends State<CardOne> {
           Container(
             width: MediaQuery.of(context).size.width,
             height: height,
+            //color: Colors.green,
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -47,7 +48,7 @@ class _CardOneState extends State<CardOne> {
                     onPressed: (){},
                     brackdown: "BreakDown, 1007",
                     branch: "Electrical",
-                    desripttext: "Yoke welding current display is not working pl correct it immedietly",
+                    desripttext: "Yoke welding...",
                     downtime: "1hr 05min",
                     elevaton: 5,
                     partstype: "car starter-Yoke",

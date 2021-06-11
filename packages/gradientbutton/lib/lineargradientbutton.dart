@@ -1,5 +1,5 @@
 library gradientbutton;
-
+import 'package:gradientbutton/appconfig.dart';
 import 'package:flutter/material.dart';
 
 class CustomAnimatedButton extends StatefulWidget {
@@ -47,9 +47,10 @@ class CustomAnimatedButton extends StatefulWidget {
 
 class _CustomAnimatedButtonState extends State<CustomAnimatedButton> {
   bool pressAttention = false;
-
+late AppConfig _appConfig;
   @override
   Widget build(BuildContext context) {
+    _appConfig = AppConfig(context);
     pressAttention = widget.selected;
     return Column(
       children: <Widget>[
@@ -78,8 +79,8 @@ class _CustomAnimatedButtonState extends State<CustomAnimatedButton> {
                     ),
                     borderRadius: BorderRadius.circular(widget.radius),
                   ),
-            width: 50.0,
-            height: 50.0,
+            width: _appConfig.rW(50),
+            height: _appConfig.rH(50),
             child: TextButton(
               style: ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -114,7 +115,7 @@ class _CustomAnimatedButtonState extends State<CustomAnimatedButton> {
                             ? widget.activecolor
                             : widget.inactivecolor,
                         fontFamily: "Roboto",
-                        fontSize: 18.0),
+                        fontSize: 14),
                   ),
                 ),
               ),
