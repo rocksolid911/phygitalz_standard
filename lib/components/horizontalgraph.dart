@@ -1,36 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'charts.dart';
+import 'horizontalgraphcharts.dart';
 
-class DataChart extends StatelessWidget {
-  final List<DataConsumption> data;
+class DataChart2 extends StatelessWidget {
+  final List<DataConsumption2> data;
 
 
-  const DataChart({Key key, this.data}) : super(key: key);
+  const DataChart2({Key key, this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     //List<charts.Series> seriesList;
-    List<charts.Series<DataConsumption, String>> series = [
+    List<charts.Series<DataConsumption2, String>> series = [
       charts.Series(
           data: data,
           id: "DataConsumption",
-          domainFn: (DataConsumption series, _) => series.date.toString(),
-          measureFn: (DataConsumption series, _) => series.breakdown,
-          colorFn: (DataConsumption series, _) => series.barColor,
+          domainFn: (DataConsumption2 series, _) => series.date.toString(),
+          measureFn: (DataConsumption2 series, _) => series.breakdown,
+          colorFn: (DataConsumption2 series, _) => series.barColor,
 
-          labelAccessorFn: (DataConsumption series, _) =>
-              '${series.breakdown.toString()}'),
+          labelAccessorFn: (DataConsumption2 series, _) =>
+          '${series.breakdown.toString()}'),
 
 
-          charts.Series(
-            data: data,
+      charts.Series(
+          data: data,
           id: "DataConsumption",
-          domainFn: (DataConsumption series2, _) => series2.date.toString(),
-          measureFn: (DataConsumption series2, _) => series2.incidents,
-          colorFn: (DataConsumption series2, _) => series2.barColor2,
-          labelAccessorFn: (DataConsumption series2, _) =>
-              '${series2.incidents.toString()}'),];
+          domainFn: (DataConsumption2 series2, _) => series2.date.toString(),
+          measureFn: (DataConsumption2 series2, _) => series2.incidents,
+          colorFn: (DataConsumption2 series2, _) => series2.barColor2,
+          labelAccessorFn: (DataConsumption2 series2, _) =>
+          '${series2.incidents.toString()}'),];
 
     return Container(
       //decoration: BoxDecoration(),
@@ -44,7 +45,7 @@ class DataChart extends StatelessWidget {
               //seriesList,
               series,
               animate: true,
-              //vertical: false,
+              vertical: false,
 
               //Asign a Custom style for the domain axis
               domainAxis: new charts.OrdinalAxisSpec(
@@ -65,7 +66,7 @@ class DataChart extends StatelessWidget {
 
               /// Assign a custom style for the measure axis.
               primaryMeasureAxis: new charts.NumericAxisSpec(
-               // show static tic at value o,50,and 100
+                // show static tic at value o,50,and 100
                 tickProviderSpec: new charts.StaticNumericTickProviderSpec(
                   <charts.TickSpec<num>>[
                     charts.TickSpec<num>(0),
@@ -91,17 +92,17 @@ class DataChart extends StatelessWidget {
                     titleStyleSpec: charts.TextStyleSpec(fontSize: 8),
                     behaviorPosition: charts.BehaviorPosition.bottom,
                     titleOutsideJustification:
-                        charts.OutsideJustification.middleDrawArea),
+                    charts.OutsideJustification.middleDrawArea),
                 new charts.ChartTitle('Start title',
                     titleStyleSpec: charts.TextStyleSpec(fontSize: 8),
                     behaviorPosition: charts.BehaviorPosition.start,
                     titleOutsideJustification:
-                        charts.OutsideJustification.middleDrawArea),
+                    charts.OutsideJustification.middleDrawArea),
               ],
               barRendererDecorator: charts.BarLabelDecorator<String>(
                 insideLabelStyleSpec: new charts.TextStyleSpec(fontSize: 6,color: charts.MaterialPalette.white),
-                         //labelAnchor: charts.BarLabelAnchor.end,
-                         outsideLabelStyleSpec: new charts.TextStyleSpec(fontSize: 8),
+                //labelAnchor: charts.BarLabelAnchor.end,
+                outsideLabelStyleSpec: new charts.TextStyleSpec(fontSize: 8),
               ),
             ),
           )

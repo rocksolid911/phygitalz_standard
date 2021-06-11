@@ -19,7 +19,7 @@ class _CardOneState extends State<CardOne> {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            height: height,
+            //height: height,
             //color: Colors.green,
             child: SingleChildScrollView(
               child: Column(
