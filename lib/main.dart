@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:liquid_ui/liquid_ui.dart';
+import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 //import 'package:phygitalz_standard/components/listviewcheckbox.dart';
 import 'package:phygitalz_standard/ui/Buttons.dart';
 import 'package:phygitalz_standard/ui/card1.dart';
@@ -25,24 +27,26 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
+    return LiquidApp(
+      materialApp: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
 
-        primarySwatch: Colors.blue,),
+          primarySwatch: Colors.blue,),
 
-     initialRoute: '/homescreen',
-      routes: {
-        '/homescreen': (BuildContext context) => HomeScreen(),
-        '/progressindicator' : (BuildContext context) => CircularPIndicator(),
-        '/Buttons': (BuildContext context) => ButtonsWidget(),
-        '/TextFields': (BuildContext context) => TextFieldAnimated(),
-        '/MainList' : (BuildContext context) => MainList(),
-        '/SearchBox': (BuildContext context) => SearchBar(),
-        '/Card1': (BuildContext context) => CardOne(),
-        '/TabCard':  (BuildContext context) => TabWithCard(),
-        '/chart': (BuildContext context) => BarChart(),
-      },
+       initialRoute: '/homescreen',
+        routes: {
+          '/homescreen': (BuildContext context) => HomeScreen(),
+          '/progressindicator' : (BuildContext context) => CircularPIndicator(),
+          '/Buttons': (BuildContext context) => ButtonsWidget(),
+          '/TextFields': (BuildContext context) => TextFieldAnimated(),
+          '/MainList' : (BuildContext context) => MainList(),
+          '/SearchBox': (BuildContext context) => SearchBar(),
+          '/Card1': (BuildContext context) => CardOne(),
+          '/TabCard':  (BuildContext context) => TabWithCard(),
+          '/chart': (BuildContext context) => BarChart(),
+        },
+      ),
     );
   }
 }
