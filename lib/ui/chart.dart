@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phygitalz_standard/components/TabCard.dart';
 import 'package:phygitalz_standard/components/Tabcardlinechart.dart';
 import 'package:phygitalz_standard/components/charts.dart';
+import 'package:phygitalz_standard/components/combochart.dart';
 import 'package:phygitalz_standard/components/dougnoutchart.dart';
 import 'package:phygitalz_standard/components/googlegaugechart.dart';
 import 'package:phygitalz_standard/components/horizontalgraph.dart';
@@ -226,7 +227,7 @@ class BarChart extends StatelessWidget {
                 ),
               ),
             ),
- //****************************end of 4th graph************************************//
+            //****************************end of 4th graph************************************//
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
@@ -337,7 +338,7 @@ class BarChart extends StatelessWidget {
                             children: [
                               Padding(
                                 padding:
-                                const EdgeInsets.only(top: 8.0, right: 7),
+                                    const EdgeInsets.only(top: 8.0, right: 7),
                                 child: Text(
                                   "200",
                                   style: TextStyle(
@@ -360,6 +361,18 @@ class BarChart extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ),
+            ),
+            //**************************end of 5th graph*************************//
+            Padding(
+              padding: EdgeInsets.all(8),
+              child: Card(
+                elevation: 8,
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 240,
+                  child: OrdinalComboBarLineChart.withSampleData(),
                 ),
               ),
             ),
