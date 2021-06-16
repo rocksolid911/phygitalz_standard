@@ -103,8 +103,12 @@ class _CardWoImageState extends State<CardWoImage> {
                   //color: Colors.cyanAccent,
                   height: _appConfig.rH(1.6),
                   width: _appConfig.rW(95),
-                  child: Divider(
-                    thickness: 1,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                        left: _appConfig.rWP(1.5), right: _appConfig.rWP(1.5)),
+                    child: Divider(
+                      thickness: 2,
+                    ),
                   ),
                 ),
                 left: _appConfig.rW(1),
@@ -113,7 +117,7 @@ class _CardWoImageState extends State<CardWoImage> {
               Positioned(
                 child: Container(
                   //referencecolor
-                 // color: Colors.orange,
+                  //color: Colors.orange,
                   height: _appConfig.rH(9),
                   width: _appConfig.rW(95),
                   child: Column(
@@ -126,34 +130,51 @@ class _CardWoImageState extends State<CardWoImage> {
                             opacity: 0.5,
                             child: Padding(
                               padding: EdgeInsets.only(
-                                  left: _appConfig.rWP(1),
-                                  bottom: _appConfig.rHP(1.7)),
+                                left: _appConfig.rWP(2),
+                                // bottom: _appConfig.rHP(1.7),
+                              ),
                               child: Text(widget.brackdown),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(right: _appConfig.rWP(1)),
-                            child: Chip(
-                              label: Text("${widget.stchip}"),
-                              backgroundColor: Colors.pinkAccent,
-                              labelStyle: TextStyle(color: Colors.white),
+                            padding: EdgeInsets.only(right: _appConfig.rWP(2.5)),
+                            child: RaisedGradientChip(
+                              child: Text(
+                                "${widget.stchip}",
+                                style: TextStyle(color: Colors.white,fontSize: 12),
+                              ),
+                              height: _appConfig.rH(3),
+                              width: _appConfig.rW(12),
+                              gradient: LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color(0xFFE71E41),
+                                  Color(0xFFE71E41),
+                                  Color(0xFFE71E41),
+                                ],
+                              ),
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
+                          //size constarint for descript text
                           Container(
-                            constraints:
-                                BoxConstraints(maxWidth: _appConfig.rW(70)),
+                            constraints: BoxConstraints(
+                              maxWidth: _appConfig.rW(90),
+                            ),
                             child: Padding(
-                              padding: EdgeInsets.only(left: _appConfig.rWP(1)),
+                              padding: EdgeInsets.only(
+                                left: _appConfig.rWP(2),
+                              ),
                               child: GestureDetector(
                                 child: Text(
                                   "${widget.desripttext}",
-                                  maxLines: 1,
+                                  maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
-                                  softWrap: false,
+                                  softWrap: true,
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                                 onTap: () => showDialog<String>(
@@ -190,7 +211,7 @@ class _CardWoImageState extends State<CardWoImage> {
               ),
               Positioned(
                 child: Container(
-                  //referencecolor
+                  // referencecolor
                   //color: Colors.deepPurpleAccent,
                   height: _appConfig.rH(13),
                   width: _appConfig.rW(95),
@@ -201,9 +222,12 @@ class _CardWoImageState extends State<CardWoImage> {
                         opacity: 0.5,
                         child: Padding(
                           padding: EdgeInsets.only(
-                            left: _appConfig.rWP(1),
+                            left: _appConfig.rWP(2),
                           ),
-                          child: Text("${widget.eqpname}"),
+                          child: Text(
+                            "${widget.eqpname}",
+                            style: TextStyle(fontSize: 14),
+                          ),
                         ),
                       ),
                       Opacity(
@@ -212,15 +236,35 @@ class _CardWoImageState extends State<CardWoImage> {
                           padding: EdgeInsets.only(
                               top: _appConfig.rHP(0.2),
                               bottom: _appConfig.rHP(2.3),
-                              left: _appConfig.rWP(1)),
-                          child: Text("${widget.partstype}"),
+                              left: _appConfig.rWP(2)),
+                          child: Text(
+                            "${widget.partstype}",
+                            style: TextStyle(fontSize: 14),
+                          ),
                         ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                          left: _appConfig.rWP(1),
+                          left: _appConfig.rWP(2),
                         ),
-                        child: Text("Assigned to : radhakrisna"),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 2.0),
+                          child: Row(
+                            children: [
+                              Opacity(
+                                  opacity: 0.4,
+                                  child: Text(
+                                    "Assigned to :",
+                                    style: TextStyle(fontSize: 12),
+                                  )),
+                              Text(
+                                "Radhakrisnan",
+                                style: TextStyle(
+                                    fontSize: 12, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       Container(
                         constraints: BoxConstraints(
@@ -228,34 +272,54 @@ class _CardWoImageState extends State<CardWoImage> {
                         ),
                         child: Padding(
                           padding: EdgeInsets.only(
-                            left: _appConfig.rWP(1),
-                          ),
+                              left: _appConfig.rWP(2), top: _appConfig.rHP(1)),
                           child: Row(
                             children: [
                               Opacity(
-                                opacity:0.5,
+                                opacity: 0.5,
                                 child: Text(
-                                  "issued",
-                                  style: TextStyle(fontSize: widget.fontsize),
+                                  "Issued",
+                                  style: TextStyle(fontSize: 10),
                                 ),
                               ),
-                              Chip(
-                                label: Text(
+                              // Chip(
+                              //   label: Text(
+                              //     "${widget.issuetime}",
+                              //     style: TextStyle(fontSize: 8),
+                              //   ),
+                              // ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 5.0),
+                                child: Text(
                                   "${widget.issuetime}",
-                                  style: TextStyle(fontSize: 8),
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Opacity(
                                 opacity: 0.5,
-                                child: Text(
-                                  "DownTime",
-                                  style: TextStyle(fontSize: 12),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 4.0),
+                                  child: Text(
+                                    "Downtime",
+                                    style: TextStyle(fontSize: 10),
+                                  ),
                                 ),
                               ),
-                              Chip(
-                                label: Text(
+                              // Chip(
+                              //   label: Text(
+                              //     "${widget.downtime}",
+                              //     style: TextStyle(fontSize: 8),
+                              //   ),
+                              // ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 4.0),
+                                child: Text(
                                   "${widget.downtime}",
-                                  style: TextStyle(fontSize: 8),
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ],
@@ -273,8 +337,8 @@ class _CardWoImageState extends State<CardWoImage> {
                   //
                   height: _appConfig.rH(13),
                   width: _appConfig.rW(18),
-                 //referencecolor
-                 // color: Colors.yellowAccent,
+                  //referencecolor
+                  //color: Colors.yellowAccent,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -283,26 +347,32 @@ class _CardWoImageState extends State<CardWoImage> {
                             BoxConstraints(maxHeight: _appConfig.rH(5)),
                         child: Image.asset('assets/images/electrical.jpeg'),
                       ),
-                      Text(
-                        '${widget.branch}',
-                        style: TextStyle(fontSize: 10),
-                      ),
-                      RaisedGradientChip(
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter,
-                          colors: [
-                            Color(widget.gradientstclr),
-                            Color(widget.gradientmdclr),
-                            Color(widget.gradientendclr),
-                          ],
-                        ),
-                        width: 40,
-                        height: 70,
-                        onPressed: widget.onPressed,
+                      Padding(
+                        padding: const EdgeInsets.only(right: 3.0),
                         child: Text(
-                          "${widget.ndchip}",
-                          style: TextStyle(color: Colors.white),
+                          '${widget.branch}',
+                          style: TextStyle(fontSize: 10),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 0.0,right: 3),
+                        child: RaisedGradientChip(
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              Color(widget.gradientstclr),
+                              Color(widget.gradientmdclr),
+                              Color(widget.gradientendclr),
+                            ],
+                          ),
+                          width: 100,
+                          height: 30,
+                          onPressed: widget.onPressed,
+                          child: Text(
+                            "${widget.ndchip}",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       )
                     ],

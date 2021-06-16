@@ -29,7 +29,7 @@ class _CardOneState extends State<CardOne> {
                     eqpname: "Yoke CNC Machining: EQP010",
                     onTap: (){},
                     onPressed: (){},
-                    brackdown: "BreakDown, 1007",
+                    brackdown: "Breakdown, 1007",
                     branch: "Electrical",
                     desripttext: "Yoke welding current display is not working pl correct it immedietly",
                     downtime: "1hr 05min",

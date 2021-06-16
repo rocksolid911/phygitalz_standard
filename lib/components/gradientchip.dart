@@ -12,16 +12,18 @@ class RaisedGradientChip extends StatelessWidget {
     Key key,
     @required this.child,
     this.gradient,
-    this.width = double.infinity,
-    this.height = 50.0,
+    this.width ,
+    this.height ,
     this.onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100.0,
-      height: 30.0,
+      // width: 100.0,
+      // height: 30.0,
+      width: width,
+      height: height,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24.0),
           gradient: gradient,
