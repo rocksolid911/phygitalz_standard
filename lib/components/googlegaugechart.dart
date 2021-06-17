@@ -28,15 +28,18 @@ class GaugeChart extends StatelessWidget {
       // the chart will be left as a hole in the center. Adjust the start
       // angle and the arc length of the pie so it resembles a gauge.
       defaultRenderer: charts.ArcRendererConfig(
-        arcWidth: 20,
+        arcWidth: 75,
         startAngle: 3 / 5 * pi,
         arcLength: 9 / 5 * pi,
-        arcRendererDecorators: [
-          // charts.ArcLabelDecorator(
-          //     labelPosition: charts.ArcLabelPosition.outside,
-          //   showLeaderLines: false,
-          // ),
-        ],
+        strokeWidthPx: 0,
+        minHoleWidthForCenterContent: 50
+        // arcRendererDecorators: [
+        //   charts.ArcLabelDecorator(
+        //       labelPosition: charts.ArcLabelPosition.outside,
+        //     showLeaderLines: true,
+        //   ),
+        //
+        // ],
       ),
     );
   }
@@ -46,7 +49,7 @@ class GaugeChart extends StatelessWidget {
     double toShow = (1 + value) / 2;
     final data = [
       GaugeSegment('Main', toShow, color),
-      GaugeSegment('Rest', 1 - toShow, Colors.grey),
+      GaugeSegment('Rest', 1- toShow, Colors.grey),
     ];
 
     return [

@@ -206,25 +206,111 @@ class BarChart extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Card(
                 elevation: 8,
-                child: PieChartSample2(),
+                child: Stack(
+                  children: [
+                    PieChartSample2(),
+                    Positioned(
+                      child: Container(
+                        //reference color
+                        //color: Colors.deepPurpleAccent,
+                        height: _appConfig.rH(6.5),
+                        width: _appConfig.rW(16),
+                        child: Column(children: [
+                          Padding(
+                            padding:  EdgeInsets.only(left: _appConfig.rWP(3.5)),
+                            child: Text("Total days",style: TextStyle(fontSize: _appConfig.rH(1.5)),),
+                          ),
+                          Text("100"),
+                        ],),
+                      ),
+                      left: _appConfig.rW(23.5),
+                      top: _appConfig.rH(13),
+                    ),
+                  ],
+                ),
               ),
             ),
             //*************************************end of 3rd chart********************//
             Padding(
               padding: EdgeInsets.all(8),
               child: Container(
-                width: 160,
-                height: 160,
-                child: Stack(
-                  children: [
-                    GaugeChart.fromValue(value: 0.75, color: Colors.green),
-                    Center(
-                      child: Text(
-                        '0.75',
-                      ),
-                    )
-                  ],
-                ),
+                width: _appConfig.rW(100),
+                height: _appConfig.rH(50),
+                child: Card(
+                    elevation: 8,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          child: Container(
+                            //reference color
+                            // color: Color(0xFFF8E0F6),
+                            constraints: BoxConstraints(
+                              maxWidth: _appConfig.rW(80),
+                              maxHeight: _appConfig.rH(40),
+                            ),
+                            child: GaugeChart.fromValue(
+                                value: 0.75, color: Colors.green),
+                          ),
+                          top: _appConfig.rH(10),
+                          left: _appConfig.rW(7),
+                        ),
+                        Positioned(
+                          child: Container(
+                            height: _appConfig.rH(5),
+                            width: _appConfig.rW(25),
+                            //reference color
+                            // color: Colors.green,
+                            child: Text(
+                              "English",
+                              style: TextStyle(fontSize: _appConfig.rW(6)),
+                            ),
+                          ),
+                          top: _appConfig.rH(10),
+                          left: _appConfig.rW(8),
+                        ),
+                        Positioned(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Avg",
+                                style: TextStyle(
+                                  fontSize: _appConfig.rH(2.5),
+                                ),
+                              ),
+                              Text(
+                                "0.75",
+                                style: TextStyle(
+                                  fontSize: _appConfig.rH(2.5),
+                                ),
+                              ),
+                            ],
+                          ),
+                          top: _appConfig.rH(28),
+                          left: _appConfig.rW(42),
+                        ),
+                        Positioned(
+                          child: Text(
+                            "0",
+                            style: TextStyle(
+                              fontSize: _appConfig.rH(2),
+                            ),
+                          ),
+                          top: _appConfig.rH(45),
+                          left: _appConfig.rW(35),
+                        ),
+                        Positioned(
+                          child: Text(
+                            "100",
+                            style: TextStyle(
+                              fontSize: _appConfig.rH(2),
+                            ),
+                          ),
+                          top: _appConfig.rH(45),
+                          left: _appConfig.rW(55),
+                        ),
+                      ],
+                    )),
               ),
             ),
             //****************************end of 4th graph************************************//

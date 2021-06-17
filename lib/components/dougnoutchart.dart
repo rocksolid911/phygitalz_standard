@@ -25,22 +25,21 @@ class PieChart2State extends State {
               aspectRatio: 1,
               child: PieChart(
                 PieChartData(
-                    pieTouchData: PieTouchData(
-                        touchCallback: (pieTouchResponse) {
-                          setState(() {
-                            final desiredTouch = pieTouchResponse
-                                .touchInput is! PointerExitEvent &&
-                                pieTouchResponse
-                                    .touchInput is! PointerUpEvent;
-                            if (desiredTouch &&
-                                pieTouchResponse.touchedSection != null) {
-                              touchedIndex = pieTouchResponse.touchedSection
-                                  .touchedSectionIndex;
-                            } else {
-                              touchedIndex = -1;
-                            }
-                          });
-                        }),
+                    pieTouchData:
+                        PieTouchData(touchCallback: (pieTouchResponse) {
+                      setState(() {
+                        final desiredTouch =
+                            pieTouchResponse.touchInput is! PointerExitEvent &&
+                                pieTouchResponse.touchInput is! PointerUpEvent;
+                        if (desiredTouch &&
+                            pieTouchResponse.touchedSection != null) {
+                          touchedIndex = pieTouchResponse
+                              .touchedSection.touchedSectionIndex;
+                        } else {
+                          touchedIndex = -1;
+                        }
+                      });
+                    }),
                     borderData: FlBorderData(
                       show: false,
                     ),
@@ -52,7 +51,7 @@ class PieChart2State extends State {
           ),
           Column(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const <Widget>[
               Indicator(
@@ -97,37 +96,29 @@ class PieChart2State extends State {
     );
   }
 
-  List<PieChartSectionData> showingSections(int touchedIndex)
-    =>
-PieData.data
-    .asMap()
-    .map<int, PieChartSectionData>((index, data) {
-      final isTouched = index == touchedIndex;
-      final double fontSize = isTouched ? 25 : 16;
-      final double radius = isTouched ? 60 : 50;
+  List<PieChartSectionData> showingSections(int touchedIndex) => PieData.data
+      .asMap()
+      .map<int, PieChartSectionData>((index, data) {
+        final isTouched = index == touchedIndex;
+        final double fontSize = isTouched ? 25 : 16;
+        final double radius = isTouched ? 60 : 50;
 
-      final value = PieChartSectionData(
-        color: data.color,
-        value: data.percent,
-        title: '${data.percent}%',
-        radius: radius,
-        titleStyle: TextStyle(
-          fontSize: fontSize,
-          fontWeight: FontWeight.bold,
-          color: const Color(0xffffffff),
-        ),
-      );
+        final value = PieChartSectionData(
+          color: data.color,
+          value: data.percent,
+          title: '${data.percent}',
+          radius: radius,
+          titleStyle: TextStyle(
+            fontSize: fontSize,
+            fontWeight: FontWeight.bold,
+            color: const Color(0xffffffff),
+          ),
+        );
 
-      return MapEntry(index, value);
-    })
-    .values.toList();
-
-
-
-
-
-
-
+        return MapEntry(index, value);
+      })
+      .values
+      .toList();
 }
 
 class Indicator extends StatelessWidget {
@@ -140,8 +131,8 @@ class Indicator extends StatelessWidget {
   const Indicator({
     Key key,
     this.color,
-     this.text,
-     this.isSquare,
+    this.text,
+    this.isSquare,
     this.size = 16,
     this.textColor = const Color(0xff505050),
   }) : super(key: key);
@@ -163,12 +154,14 @@ class Indicator extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: textColor),
+          style: TextStyle(
+              fontSize: 16, fontWeight: FontWeight.bold, color: textColor),
         )
       ],
     );
   }
 }
+
 class PieData {
   static List<Data> data = [
     Data(name: 'Blue', percent: 40, color: const Color(0xff0293ee)),
