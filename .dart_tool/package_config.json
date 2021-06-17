@@ -122,6 +122,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "liquid_ui",
+      "rootUri": "file:///Users/rocksolid/Documents/app_dev/flutter/.pub-cache/hosted/pub.dartlang.org/liquid_ui-1.0.0+9",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
+    },
+    {
       "name": "logging",
       "rootUri": "file:///Users/rocksolid/Documents/app_dev/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.0.1",
       "packageUri": "lib/",
@@ -156,6 +162,12 @@
       "rootUri": "file:///Users/rocksolid/Documents/app_dev/flutter/.pub-cache/hosted/pub.dartlang.org/percent_indicator-3.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "shrink_sidemenu",
+      "rootUri": "file:///Users/rocksolid/Documents/app_dev/flutter/.pub-cache/hosted/pub.dartlang.org/shrink_sidemenu-1.0.0+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "sky_engine",
@@ -224,7 +236,7 @@
       "languageVersion": "2.10"
     }
   ],
-  "generated": "2021-06-05T15:12:42.059843Z",
+  "generated": "2021-06-17T08:27:30.462816Z",
   "generator": "pub",
   "generatorVersion": "2.13.0"
 }
