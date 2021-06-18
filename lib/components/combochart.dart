@@ -13,67 +13,10 @@ class OrdinalComboBarLineChart extends StatelessWidget {
     return new OrdinalComboBarLineChart(
       _createSampleData(),
       // Disable animations for image tests.
-      animate: false,
+      animate: true,
     );
   }
 
-  // EXCLUDE_FROM_GALLERY_DOCS_START
-  // This section is excluded from being copied to the gallery.
-  // It is used for creating random series data to demonstrate animation in
-  // the example app only.
-  // factory OrdinalComboBarLineChart.withRandomData() {
-  //   return new OrdinalComboBarLineChart(_createRandomData());
-  // }
-
-  /// Create random data.
-  static List<charts.Series<OrdinalSales, String>> _createRandomData() {
-    final random = new Random();
-
-    final desktopSalesData = [
-      new OrdinalSales('2014', random.nextInt(100)),
-      new OrdinalSales('2015', random.nextInt(100)),
-      new OrdinalSales('2016', random.nextInt(100)),
-      new OrdinalSales('2017', random.nextInt(100)),
-    ];
-
-    final tableSalesData = [
-      new OrdinalSales('2014', random.nextInt(100)),
-      new OrdinalSales('2015', random.nextInt(100)),
-      new OrdinalSales('2016', random.nextInt(100)),
-      new OrdinalSales('2017', random.nextInt(100)),
-    ];
-
-    final mobileSalesData = [
-      new OrdinalSales('2014', random.nextInt(100)),
-      new OrdinalSales('2015', random.nextInt(100)),
-      new OrdinalSales('2016', random.nextInt(100)),
-      new OrdinalSales('2017', random.nextInt(100)),
-    ];
-
-    return [
-      new charts.Series<OrdinalSales, String>(
-          id: 'Desktop',
-          colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
-          domainFn: (OrdinalSales sales, _) => sales.year,
-          measureFn: (OrdinalSales sales, _) => sales.sales,
-          data: desktopSalesData),
-      new charts.Series<OrdinalSales, String>(
-          id: 'Tablet',
-          colorFn: (_, __) => charts.MaterialPalette.red.shadeDefault,
-          domainFn: (OrdinalSales sales, _) => sales.year,
-          measureFn: (OrdinalSales sales, _) => sales.sales,
-          data: tableSalesData),
-      new charts.Series<OrdinalSales, String>(
-          id: 'Mobile',
-          colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
-          domainFn: (OrdinalSales sales, _) => sales.year,
-          measureFn: (OrdinalSales sales, _) => sales.sales,
-          data: mobileSalesData)
-      // Configure our custom line renderer for this series.
-        ..setAttribute(charts.rendererIdKey, 'customLine'),
-    ];
-  }
-  // EXCLUDE_FROM_GALLERY_DOCS_END
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +24,8 @@ class OrdinalComboBarLineChart extends StatelessWidget {
         animate: animate,
         // Configure the default renderer as a bar renderer.
         defaultRenderer: new charts.BarRendererConfig(
-            groupingType: charts.BarGroupingType.grouped),
+           groupingType: charts.BarGroupingType.grouped
+    ),
         // Custom renderer configuration for the line series. This will be used for
         // any series that does not define a rendererIdKey.
         customSeriesRenderers: [
@@ -115,19 +59,30 @@ class OrdinalComboBarLineChart extends StatelessWidget {
     ];
 
     return [
-      new charts.Series<OrdinalSales, String>(
+
+       charts.Series<OrdinalSales, String>(
           id: 'Desktop',
           colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
           domainFn: (OrdinalSales sales, _) => sales.year,
           measureFn: (OrdinalSales sales, _) => sales.sales,
           data: desktopSalesData),
-      new charts.Series<OrdinalSales, String>(
-          id: 'Tablet',
-          colorFn: (_, __) => charts.MaterialPalette.red.shadeDefault,
+      charts.Series<OrdinalSales, String>(
+          id: 'Desktop',
+          colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
           domainFn: (OrdinalSales sales, _) => sales.year,
           measureFn: (OrdinalSales sales, _) => sales.sales,
-          data: tableSalesData),
-      new charts.Series<OrdinalSales, String>(
+          data: desktopSalesData)
+        ..setAttribute(charts.rendererIdKey, 'customLine'),
+         charts.Series<OrdinalSales, String>(
+          id: 'Mobile ',
+          colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
+          domainFn: (OrdinalSales sales, _) => sales.year,
+          measureFn: (OrdinalSales sales, _) => sales.sales,
+          data: mobileSalesData),
+
+      // Configure our custom line renderer for this series.
+       // ..setAttribute(charts.rendererIdKey, 'customLine'),
+      charts.Series<OrdinalSales, String>(
           id: 'Mobile ',
           colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
           domainFn: (OrdinalSales sales, _) => sales.year,
@@ -135,6 +90,7 @@ class OrdinalComboBarLineChart extends StatelessWidget {
           data: mobileSalesData)
       // Configure our custom line renderer for this series.
         ..setAttribute(charts.rendererIdKey, 'customLine'),
+
     ];
   }
 }
